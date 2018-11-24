@@ -1,0 +1,25 @@
+/* miniprogram/pages/heros/heros.wxss */
+.heros-title{
+  text-align: center;
+  margin: 20rpx;
+}
+.heros-list-item{
+  display: flex;
+  align-items: center;
+}
+.heros-thead{
+  display: flex;
+  align-items: center;
+}
+.list-item{
+  width: 33%;
+  text-align: center;
+}
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  /* border-radius: 50%; */
+  background-size: cover;
+  background-color: white;
+}

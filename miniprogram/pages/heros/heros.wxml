@@ -1,0 +1,37 @@
+<!--miniprogram/pages/heros/heros.wxml-->
+
+<view>
+  <!-- <text>miniprogram/pages/heros/heros.wxml</text> -->
+  <view class="heros-title">
+    <text >英灵图鉴</text>
+  </view>
+  
+  <!-- <button bindtap="getHerosList">query</button> -->
+  <view class='heros-list'>
+  <!-- <text wx:if="{{herosList}}">{{herosList}}</text> -->
+  <!-- <text wx:if="{{queryResult}}">{{queryResult}}</text> -->
+  <view class='heros-thead'>
+    <text class='list-item'>头像</text>
+    <text class='list-item'>真名</text>
+    <text class='list-item'>职阶</text>
+    <text class='list-item'>宝具</text>
+  </view>
+    <view class='heros-list-item' wx:for="{{ herosList }}" wx:key="{{_id}}">
+      <view class="list-item">
+        <image 
+          class='userinfo-avatar'
+          src="{{item.icon}}">
+        </image>
+      </view>
+      <text class='list-item'>{{ item.name }}</text>
+      <text class='list-item'>{{ item.class }}</text>
+      <view class='list-item'>
+        <image 
+          class='userinfo-avatar'
+          src="{{item.power}}">
+        </image>
+      </view>
+    </view>
+  </view>
+  
+</view>

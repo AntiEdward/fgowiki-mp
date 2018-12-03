@@ -1,0 +1,11 @@
+<!--miniprogram/pages/heroDetail/heroDetail.wxml-->
+<!-- <text>miniprogram/pages/heroDetail/heroDetail.wxml</text> -->
+<view>
+  <view class="heros-title">
+    <text >英灵详情</text>
+  </view>
+
+  <view class='hero-detail-main'>
+
+  </view>
+</view>

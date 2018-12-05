@@ -11,6 +11,7 @@
 	"appid": "wx518d0a61f99cb457",
 	"projectname": "FGOwiki",
 	"libVersion": "2.2.5",
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,

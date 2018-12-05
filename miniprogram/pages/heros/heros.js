@@ -6,7 +6,8 @@ Page({
    */
   data: {
     herosList: [],
-    queryResult: []
+    inputName: '',
+    classSearchClicked: '',
   },
 
   /**
@@ -69,14 +70,28 @@ Page({
    * 获取英灵列表
    */
   getHerosList: function(){
-    // console.log('ss')
     const db = wx.cloud.database()
-    // 查询当前用户所有的 counters
+
     db.collection('heros').get({
       success: res => {
-        this.setData({
-          queryResult: JSON.stringify(res.data, null, 2)
-        })
+        //判断头像图标是否有缓存，有缓存就取缓存数据，没有就存入缓存
+        //只是储存了地址，不是图片文件
+        // let list = res.data
+        // for(let i in list){
+        //   wx.getStorage({
+        //     key: list[i].hero_id,
+        //     success(res) {
+        //       list[i].icon = res.data
+        //     },
+        //     fail(res) {
+        //       wx.setStorage({
+        //         key: list[i].hero_id,
+        //         data: list[i].icon
+        //       })
+        //     }
+        //   })
+        // }
+
         this.setData({
           herosList: res.data
         })
@@ -92,30 +107,35 @@ Page({
     })
   },
   /**
+   * 输入框内容
+   */
+  bindKeyInput: function(e){
+    this.setData({
+      inputName: e.detail.value
+    })
+  },
+  /**
    * 条件查询
    */
   getHerosListByRequire: function(e){
+    //避免渲染卡顿，先置空
+    this.setData({
+      herosList: []
+    })
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
     const db = wx.cloud.database()
-
+    // console.log(this.data.inputName, this.data.classSearchClicked)
     let req = {}
-    let val = e.detail.value
-    for(let i in val){
-      if(val[i] !== ''){
-        let descriptor = Object.create(null);
-        descriptor.value = val[i]
-        Object.defineProperty(req, i, descriptor)
-      }
+    if (this.data.inputName !== ''){
+      req._name = this.data.inputName
+    } else if (this.data.classSearchClicked !== ''){
+      req._class = this.data.classSearchClicked
+    } else {
+      this.getHerosList()
     }
-    console.log('req', req)
-    
-    db.collection('heros').where({
-      
-    }).get({
+    // console.log('req', req)
+    db.collection('heros').where(req).get({
       success: res => {
-        this.setData({
-          queryResult: JSON.stringify(res.data, null, 2)
-        })
         this.setData({
           herosList: res.data
         })
@@ -130,8 +150,31 @@ Page({
       }
     })
   },
-  formReset: function () {
-    console.log('form发生了reset事件')
+  /**
+   * 搜索字段初始化
+   */
+  searchInit: function () {
+    this.setData({
+      classSearchClicked: ''
+    })
+  },
+  /**
+   * 修改职阶选择
+   */
+  changeClassName: function(e){
+    let className = e.currentTarget.dataset.classname
+    //已选中时，取消选中
+    if (this.data.classSearchClicked === className){
+      this.setData({
+        classSearchClicked: ''
+      })
+    }else{
+      this.setData({
+        classSearchClicked: className
+      })
+    }
+    this.getHerosListByRequire()
+    // console.log('classSearchClicked', this.data.classSearchClicked)
   },
    /**
    * 跳转详情页面

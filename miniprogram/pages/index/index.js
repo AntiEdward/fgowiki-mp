@@ -116,12 +116,4 @@ Page({
       }
     })
   },
-
-  //测试跳转
-  jump: function(){
-    // console.log('jump')
-    wx.navigateTo({
-      url: '../heros/heros',
-    })
-  }
 })

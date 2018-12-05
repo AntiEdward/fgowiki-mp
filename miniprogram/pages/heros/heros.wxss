@@ -2,6 +2,8 @@
 .heros-title{
   text-align: center;
   margin: 20rpx;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #c5c5c5;
 }
 .heros-list-item{
   display: flex;
@@ -22,4 +24,17 @@
   /* border-radius: 50%; */
   background-size: cover;
   background-color: white;
+}
+.heros-sidebar-class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-class-container{
+  width: 16rem;
+}
+.sidebar-class-img{
+  width: 2rem;
+  height: 2rem;
+  margin: 5px;
 }

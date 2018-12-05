@@ -74,14 +74,14 @@
         <!-- Moon Cancer -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'mooncancer' ? '../../images/common/MoonCancer-G.png' : '../../images/common/Avenger-C.png' }}"
+          src="{{ classSearchClicked === 'mooncancer' ? '../../images/common/MoonCancer-G.png' : '../../images/common/MoonCancer-C.png' }}"
           data-classname='mooncancer'
           bindtap='changeClassName'>
         </image>
         <!-- Alter Ego -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'alterego' ? '../../images/common/AlterEgo-G.png' : '../../images/common/Avenger-C.png' }}"
+          src="{{ classSearchClicked === 'alterego' ? '../../images/common/AlterEgo-G.png' : '../../images/common/AlterEgo-C.png' }}"
           data-classname='alterego'
           bindtap='changeClassName'>
         </image>

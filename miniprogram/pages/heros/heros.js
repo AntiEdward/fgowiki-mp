@@ -72,7 +72,7 @@ Page({
   getHerosList: function(){
     const db = wx.cloud.database()
 
-    db.collection('heros').get({
+    db.collection('heros').orderBy('hero_id', 'asc').get({
       success: res => {
         //判断头像图标是否有缓存，有缓存就取缓存数据，没有就存入缓存
         //只是储存了地址，不是图片文件
@@ -181,9 +181,9 @@ Page({
    */
   getHeroDetail: function(e){
     // console.log('gethd', e.currentTarget.dataset.clickeditem)
-    let name = e.currentTarget.dataset.clickeditem.name
+    let hero_id = e.currentTarget.dataset.clickeditem.hero_id
     wx.navigateTo({
-      url: '../heroDetail/heroDetail?name=' + name
+      url: '../heroDetail/heroDetail?hero_id=' + hero_id
     })
   }
 })

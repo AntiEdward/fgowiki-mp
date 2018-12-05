@@ -8,10 +8,15 @@
 .heros-list-item{
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #c5c5c5;
 }
 .heros-thead{
   display: flex;
   align-items: center;
+  border-top: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .list-item{
   text-align: center;

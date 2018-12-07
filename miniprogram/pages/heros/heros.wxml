@@ -11,85 +11,85 @@
         <!-- saber -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'saber' ? '../../images/common/Saber-G.png' : '../../images/common/Saber-C.png' }}"
-          data-classname='saber'
+          src="{{ classSearchClicked === 'Saber' ? '../../images/common/Saber-G.png' : '../../images/common/Saber-C.png' }}"
+          data-classname='Saber'
           bindtap='changeClassName'>
         </image>
         <!-- lancer -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'lancer' ? '../../images/common/Lancer-G.png' : '../../images/common/Lancer-C.png' }}"
-          data-classname='lancer'
+          src="{{ classSearchClicked === 'Lancer' ? '../../images/common/Lancer-G.png' : '../../images/common/Lancer-C.png' }}"
+          data-classname='Lancer'
           bindtap='changeClassName'>
         </image>
         <!-- archer -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'archer' ? '../../images/common/Archer-G.png' : '../../images/common/Archer-C.png' }}"
-          data-classname='archer'
+          src="{{ classSearchClicked === 'Archer' ? '../../images/common/Archer-G.png' : '../../images/common/Archer-C.png' }}"
+          data-classname='Archer'
           bindtap='changeClassName'>
         </image>
         <!-- rider -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'rider' ? '../../images/common/Rider-G.png' : '../../images/common/Rider-C.png' }}"
-          data-classname='rider'
+          src="{{ classSearchClicked === 'Rider' ? '../../images/common/Rider-G.png' : '../../images/common/Rider-C.png' }}"
+          data-classname='Rider'
           bindtap='changeClassName'>
         </image>
         <!-- caster -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'caster' ? '../../images/common/Caster-G.png' : '../../images/common/Caster-C.png' }}"
-          data-classname='caster'
+          src="{{ classSearchClicked === 'Caster' ? '../../images/common/Caster-G.png' : '../../images/common/Caster-C.png' }}"
+          data-classname='Caster'
           bindtap='changeClassName'>
         </image>
         <!-- assassin -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'assassin' ? '../../images/common/Assassin-G.png' : '../../images/common/Assassin-C.png' }}"
-          data-classname='assassin'
+          src="{{ classSearchClicked === 'Assassin' ? '../../images/common/Assassin-G.png' : '../../images/common/Assassin-C.png' }}"
+          data-classname='Assassin'
           bindtap='changeClassName'>
         </image>
         <!-- berserker -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'berserker' ? '../../images/common/Berserker-G.png' : '../../images/common/Berserker-C.png' }}"
-          data-classname='berserker'
+          src="{{ classSearchClicked === 'Berserker' ? '../../images/common/Berserker-G.png' : '../../images/common/Berserker-C.png' }}"
+          data-classname='Berserker'
           bindtap='changeClassName'>
         </image>
         <!-- ruler -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'ruler' ? '../../images/common/Ruler-G.png' : '../../images/common/Ruler-C.png' }}"
-          data-classname='ruler'
+          src="{{ classSearchClicked === 'Ruler' ? '../../images/common/Ruler-G.png' : '../../images/common/Ruler-C.png' }}"
+          data-classname='Ruler'
           bindtap='changeClassName'>
         </image>
         <!-- avenger -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'avenger' ? '../../images/common/Avenger-G.png' : '../../images/common/Avenger-C.png' }}"
-          data-classname='avenger'
+          src="{{ classSearchClicked === 'Avenger' ? '../../images/common/Avenger-G.png' : '../../images/common/Avenger-C.png' }}"
+          data-classname='Avenger'
           bindtap='changeClassName'>
         </image>
         <!-- Moon Cancer -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'mooncancer' ? '../../images/common/MoonCancer-G.png' : '../../images/common/MoonCancer-C.png' }}"
-          data-classname='mooncancer'
+          src="{{ classSearchClicked === 'Mooncancer' ? '../../images/common/MoonCancer-G.png' : '../../images/common/MoonCancer-C.png' }}"
+          data-classname='Mooncancer'
           bindtap='changeClassName'>
         </image>
         <!-- Alter Ego -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'alterego' ? '../../images/common/AlterEgo-G.png' : '../../images/common/AlterEgo-C.png' }}"
-          data-classname='alterego'
+          src="{{ classSearchClicked === 'Alterego' ? '../../images/common/AlterEgo-G.png' : '../../images/common/AlterEgo-C.png' }}"
+          data-classname='Alterego'
           bindtap='changeClassName'>
         </image>
         <!-- shielder -->
         <image 
           class='sidebar-class-img'
-          src="{{ classSearchClicked === 'shielder' ? '../../images/common/Shielder-G.png' : '../../images/common/Shielder-C.png' }}"
-          data-classname='shielder'
+          src="{{ classSearchClicked === 'Shielder' ? '../../images/common/Shielder-G.png' : '../../images/common/Shielder-C.png' }}"
+          data-classname='Shielder'
           bindtap='changeClassName'>
         </image>
       </view>

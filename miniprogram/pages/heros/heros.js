@@ -8,6 +8,7 @@ Page({
     herosList: [],
     inputName: '',
     classSearchClicked: '',
+    pageSkip: 0,  //当前页数
   },
 
   /**
@@ -71,8 +72,15 @@ Page({
    */
   getHerosList: function(){
     const db = wx.cloud.database()
-
-    db.collection('heros').orderBy('hero_id', 'asc').get({
+    let pageSkipNum = this.data.pageSkip
+    // if (pageSkipNum === 0){
+    //   getHerosListByRequire()
+    // }
+    db.collection('heros-list')
+      .orderBy('hero_id', 'asc')
+      .skip(pageSkipNum) 
+      .limit(20)
+      .get({
       success: res => {
         //判断头像图标是否有缓存，有缓存就取缓存数据，没有就存入缓存
         //只是储存了地址，不是图片文件
@@ -93,7 +101,8 @@ Page({
         // }
 
         this.setData({
-          herosList: res.data
+          herosList: res.data,
+          pageSkip: pageSkipNum + 20
         })
         console.log('[数据库] [查询记录] 成功: ', res)
       },
@@ -134,7 +143,7 @@ Page({
       this.getHerosList()
     }
     // console.log('req', req)
-    db.collection('heros').where(req).get({
+    db.collection('heros-list').where(req).get({
       success: res => {
         this.setData({
           herosList: res.data

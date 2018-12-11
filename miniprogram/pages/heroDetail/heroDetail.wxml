@@ -6,6 +6,19 @@
   </view>
 
   <view class='hero-detail-main'>
-
+    <!-- 头像属性 -->
+    <view>
+      <view></view>
+    </view>
+    <!-- 宝具 -->
+    <view>
+      <view>
+        <image></image>
+        <text></text>
+      </view>
+    </view>
+    <!-- 技能 -->
+    <view>
+    </view>
   </view>
 </view>

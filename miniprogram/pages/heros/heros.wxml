@@ -1,6 +1,5 @@
 <!--miniprogram/pages/heros/heros.wxml-->
-
-<view>
+<scroll-view style="height: 100vh" scroll-y bindscrolltolower="getNuxtPage">
   <!-- <text>miniprogram/pages/heros/heros.wxml</text> -->
   <view class="heros-title">
     <text >英灵图鉴</text>
@@ -99,7 +98,7 @@
     <button bindtap='getHerosListByRequire'>搜索</button>
     <button bindtap=''>清空</button> -->
   </view>
-  <view class='heros-list'>
+  <view class='heros-list' >
     <view class='heros-thead'>
       <text class='list-item' style='width: 15%'>星级</text>
       <text class='list-item' style='width: 20%'>头像</text>
@@ -130,4 +129,4 @@
     </view>
   </view>
   
-</view>
+</scroll-view>

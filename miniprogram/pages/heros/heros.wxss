@@ -5,6 +5,9 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #c5c5c5;
 }
+/* .heros-list{
+  height: 100vh
+} */
 .heros-list-item{
   display: flex;
   align-items: center;

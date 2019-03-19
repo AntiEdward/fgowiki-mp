@@ -123,23 +123,6 @@ Page({
       .limit(20)
       .get({
         success: res => {
-          //判断头像图标是否有缓存，有缓存就取缓存数据，没有就存入缓存
-          //只是储存了地址，不是图片文件
-          // let list = res.data
-          // for(let i in list){
-          //   wx.getStorage({
-          //     key: list[i].hero_id,
-          //     success(res) {
-          //       list[i].icon = res.data
-          //     },
-          //     fail(res) {
-          //       wx.setStorage({
-          //         key: list[i].hero_id,
-          //         data: list[i].icon
-          //       })
-          //     }
-          //   })
-          // }
           console.log('getAllHerosList')
           this.setData({
             herosList: res.data,
@@ -167,7 +150,7 @@ Page({
     const db = wx.cloud.database()
     // console.log(this.data.inputName, this.data.classSearchClicked)
     let req = {}
-    req._class = _class
+    req.class = _class
     // 目前只有职阶查询
     // if (this.data.inputName !== '') {
     //   req._name = this.data.inputName

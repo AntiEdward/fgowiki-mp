@@ -108,22 +108,21 @@
     </view>
     <view class='heros-list-item' 
       wx:for="{{ herosList }}" 
-      wx:key="{{_id}}"
-      data-clickedItem='{{item}}'
-      bindtap="getHeroDetail">
+      wx:key="{{ hero_id }}"
+      data-clickedItem='{{item}}'>
       <text class='list-item' style='width: 15%'>{{ item.stars }}</text>
       <view class="list-item" style='width: 20%'>
         <image 
           class='userinfo-avatar'
-          src="{{item.icon}}">
+          src="https://iseefire.cn/public/images/icon/hero/{{ item.icon_id }}.jpg">
         </image>
       </view>
-      <text class='list-item' style='width: 25%'>{{ item._name }}</text>
-      <text class='list-item' style='width: 20%'>{{ item._class }}</text>
+      <text class='list-item' style='width: 25%'>{{ item.name_cn }}</text>
+      <text class='list-item' style='width: 20%'>{{ item.class }}</text>
       <view class='list-item' style='width: 20%'>
         <image 
           class='userinfo-avatar'
-          src="{{item.power}}">
+          src="../../images/common/{{ item.phantasm_icon }}.png">
         </image>
       </view>
     </view>

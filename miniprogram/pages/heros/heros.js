@@ -109,7 +109,7 @@ Page({
       this.getAllHerosListSkip(this.data.pageSkip)
     }else{
       //是翻页，有查询条件 - 翻页条件查询
-      this.getHerosListByRequireSkip(this.data.pageSkip, this.data.classSearchClicked)
+      this.getHerosListByRequireSkip(this.data.pageSkip,         this.data.classSearchClicked)
     }
   },
   /**
@@ -118,7 +118,7 @@ Page({
    */
   getAllHerosList: function() {
     const db = wx.cloud.database()
-    db.collection('heros-list')
+    db.collection('hero-list')
       .orderBy('hero_id', 'asc')
       .limit(20)
       .get({
@@ -175,7 +175,7 @@ Page({
     //   req._class = _class
     // }
     // console.log('req', req)
-    db.collection('heros-list')
+    db.collection('hero-list')
       .where(req)
       .limit(20)
       .get({
@@ -199,7 +199,7 @@ Page({
    */
   getAllHerosListSkip: function(page){
     const db = wx.cloud.database()
-    db.collection('heros-list')
+    db.collection('hero-list')
       .orderBy('hero_id', 'asc')
       .skip(page * 20)
       .limit(20)
@@ -229,7 +229,7 @@ Page({
     const db = wx.cloud.database()
     let req = {}
     req._class = _class
-    db.collection('heros-list')
+    db.collection('hero-list')
       .where(req)
       .skip(page * 20)
       .limit(20)

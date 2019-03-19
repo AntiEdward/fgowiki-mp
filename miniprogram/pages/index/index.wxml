@@ -12,6 +12,9 @@
     <navigator class='main-mav-item' url="../heros/heros">英灵图鉴</navigator>
     <navigator class='main-mav-item' url="../heros/heros">素材列表</navigator>
     <navigator class='main-mav-item' url="../heros/heros">活动列表</navigator>
+    <!-- <navigator class='main-mav-item' url="../addHerosList/addHerosList">录入列表</navigator>
+    <navigator class='main-mav-item' url="../heros/heros">录入详情</navigator> -->
+    <navigator class='main-mav-item' url="../test/test">测试</navigator>
   </view>
   <!-- footer -->
   <view>

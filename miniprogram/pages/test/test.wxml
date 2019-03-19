@@ -1,0 +1,10 @@
+<!--miniprogram/pages/test/test.wxml-->
+<view class="container">
+<view>
+  <button bindtap='getTest'>测试</button>
+</view>
+  <view>
+    <!-- <image src="http://iseefire.cn:3000/public/images/icon/001.jpg"></image> -->
+  </view>
+  
+</view>

@@ -10,7 +10,7 @@
   <!-- main -->
   <view class=''>
     <navigator class='main-mav-item' url="../heros/heros">英灵图鉴</navigator>
-    <navigator class='main-mav-item' url="../craft/craft">素材列表</navigator>
+    <navigator class='main-mav-item' url="../craft/craft">礼装图鉴</navigator>
     <!-- <navigator class='main-mav-item' url="../heros/heros">活动列表</navigator> -->
     <!-- <navigator class='main-mav-item' url="../test/test">测试</navigator> -->
   </view>

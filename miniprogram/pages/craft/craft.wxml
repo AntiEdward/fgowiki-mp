@@ -1,2 +1,33 @@
 <!--miniprogram/pages/craft/craft.wxml-->
-<text>miniprogram/pages/craft/craft.wxml</text>
+<!-- <text>miniprogram/pages/craft/craft.wxml</text> -->
+<scroll-view style="height: 100vh" scroll-y bindscrolltolower="getNuxtPage">
+    <view class="heros-title">
+        <text >礼装图鉴</text>
+    </view>
+    <view class='heros-list' >
+        <view class='heros-thead'>
+            <text class='list-item' style='width: 10%'>星级</text>
+            <text class='list-item' style='width: 20%'>图标</text>
+            <text class='list-item' style='width: 20%'>名称</text>
+            <text class='list-item' style='width: 10%'>hp</text>
+            <text class='list-item' style='width: 10%'>atk</text>
+            <text class='list-item' style='width: 30%'>效果</text>
+        </view>
+        <view class='heros-list-item' 
+            wx:for="{{ craftList }}" 
+            wx:key="{{ craft_id }}"
+            data-clickedItem='{{item}}'>
+            <text class='list-item' style='width: 11%'>{{ item.stars }}</text>
+            <view class="list-item" style='width: 20%'>
+                <image 
+                    class='userinfo-avatar'
+                    src="https://iseefire.cn/public/images/icon/craft/{{ item.icon_id }}.jpg">
+                </image>
+            </view>
+            <text class='list-item' style='width: 20%'>{{ item.name_cn }}</text>
+            <text class='list-item' style='width: 10%'>{{ item.lvmax_hp }}</text>
+            <text class='list-item' style='width: 10%'>{{ item.lvmax_atk }}</text>
+            <text class='list-item' style='width: 30%' decode selectable >{{ item.skill_describe }}</text>
+        </view>
+    </view>
+</scroll-view>

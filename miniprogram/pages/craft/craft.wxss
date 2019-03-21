@@ -1,1 +1,32 @@
 /* miniprogram/pages/craft/craft.wxss */
+.heros-title{
+    text-align: center;
+    margin: 20rpx;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.heros-list-item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c5c5c5;
+}
+.heros-thead{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.list-item{
+    text-align: center;
+    font-size: 14px;
+}
+.userinfo-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+    /* border-radius: 50%; */
+    background-size: cover;
+    background-color: white;
+}
